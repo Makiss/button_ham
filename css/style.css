@@ -36,7 +36,11 @@
 
 .main-nav {
 	position: absolute;
-	bottom: -15px;
+	bottom: -20px;
+}
+
+.main-nav a {
+	text-decoration: none;
 }
 
 .main-nav-list {
@@ -45,28 +49,8 @@
 	list-style: none;
 }
 
-.main-nav-item {
-	position: relative;
-}
-
-.main-nav-item:hover > .main-nav-list {
-	display: block;
-}
-
 .main-nav-list-level-one {
-	margin-right: 5px;
-}
-
-.main-nav-list-level-two {
-	display: none;
-	position: absolute;
-	z-index: 10;
-	bottom: -15px;
-	left: 15px;
-}
-
-.main-nav-list-level-one:last-child {
-	margin-right: 0;
+	background-color: black;
 }
 
 .main-nav-list-level-one::after {
@@ -75,8 +59,39 @@
 	clear: both;
 }
 
+.main-nav-list-level-two {
+	display: none;
+	position: absolute;
+	z-index: 10;
+	bottom: -20px;
+	left: 15px;
+	background-color: rgba(0, 0, 0, 0.6);
+}
+
+.main-nav-item {
+	position: relative;
+	padding: 3px 4px;
+}
+
+.main-nav-item:hover > .main-nav-list {
+	display: block;
+}
+
 .main-nav-item-level-one {
 	float: left;
+	margin-right: 5px;
+}
+
+.main-nav-item-level-one a {
+	color: #eeeeee;
+}
+
+.main-nav-item-level-two a {
+	color: #ffffff;
+}
+
+.main-nav-item-level-one:last-child {
+	margin-right: 0;
 }
 
 .checkbox:checked ~ .main-header .main-nav {
