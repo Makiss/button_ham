@@ -7,5 +7,44 @@
 }
 
 .btn-menu {
+	position: relative;
+	width: 17px;
+	height: 14px;
 	font-size: 0;
+	background-image: linear-gradient(
+		#303030 21.42857142857143%,
+		transparent 21.42857142857143%, 
+		transparent 35.71428571428572%, 
+		#303030 35.71428571428572%,
+		#303030 57.14285714285715%,
+		transparent 57.14285714285715%,
+		transparent 71.42857142857144%,
+		#303030 71.42857142857144%,
+		#303030 92.85714285714287%,
+		transparent 92.85714285714287%
+	);
+}
+
+.btn-menu:focus {
+	background-image: none;
+}
+
+.btn-menu:focus::before,
+.btn-menu:focus::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	height: 3px;
+	background-color: #303030;
+}
+
+.btn-menu:focus::before {
+	top: 5px;
+	transform: rotate(45deg);
+}
+
+.btn-menu:focus::after {
+	bottom: 6px;
+	transform: rotate(-45deg);
 }
